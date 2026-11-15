@@ -300,6 +300,20 @@
     else if (e.key === 'Backspace' || (e.key === 'z' && (e.metaKey || e.ctrlKey))) { e.preventDefault(); undo(); }
   });
 
+  /* iOS keeps the layout viewport full height when the keyboard opens; size the mobile chat to the visible area instead */
+  const vv = window.visualViewport;
+  if (vv) {
+    const root = document.documentElement.style;
+    const fit = () => {
+      root.setProperty('--vvh', `${vv.height}px`);
+      root.setProperty('--vvt', `${vv.offsetTop}px`);
+      if (openDog) chatLog.scrollTop = chatLog.scrollHeight;
+    };
+    vv.addEventListener('resize', fit);
+    vv.addEventListener('scroll', fit);
+    fit();
+  }
+
   show(location.hash === '#deck' ? 'deck' : 'cover', false);
   syncMatches();
   layout();

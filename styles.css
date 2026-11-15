@@ -209,13 +209,13 @@ html:not(.js) .actions { display: none; }
   .match-btn { font-size: var(--text-xs); }
   .stage { grid-column: 1; grid-row: 2; justify-content: flex-start; padding: var(--space-md); gap: var(--space-md); }
   .js .deck { max-height: none; }
-  .chat { grid-column: 1; grid-row: 1 / -1; }
+  .chat { position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-modal); height: var(--vvh, 100dvh); transform: translateY(var(--vvt, 0px)); background: var(--color-paper); }
   .app.is-chatting .side { display: none; }
   .chat__head { padding-inline: var(--space-xs) var(--space-md); }
   .chat__log { padding: var(--space-md); }
   .chat__starters { padding: 0 var(--space-md) var(--space-sm); flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
   .starter { flex: none; }
-  .chat__form { padding: var(--space-sm) var(--space-md) var(--space-md); }
+  .chat__form { padding: var(--space-sm) var(--space-md) max(var(--space-md), env(safe-area-inset-bottom)); }
   .match__inner { grid-template-columns: minmax(0, 1fr); }
   .match__photo { aspect-ratio: 4 / 3; border-right: 0; border-bottom: var(--rule-bar) solid var(--color-ink); }
   .match__copy { padding: var(--space-lg); }
