@@ -77,6 +77,7 @@
       <h2 class="side__title" id="matches-title">Matches <span class="side__count" data-match-count>0</span></h2>
       <p class="side__empty" data-matches-empty>No matches yet. Swipe right on a dog you like and they might like you back.</p>
       <ul class="matches" data-matches aria-live="polite"></ul>
+      <p class="side__hint" data-matches-hint hidden>Pick a match to start chatting.</p>
     </aside>
 
     <div class="stage">
@@ -259,6 +260,30 @@
       </div>
       <p class="visually-hidden" aria-live="polite" data-announce></p>
     </div>
+
+    <section class="chat" data-chat hidden aria-labelledby="chat-title">
+      <header class="chat__head">
+        <button class="chat__back" type="button" data-chat-close aria-label="Back to swiping">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <figure class="chat__avatar" data-chat-avatar></figure>
+        <div class="chat__who">
+          <h2 id="chat-title" data-chat-name>Chat</h2>
+          <p data-chat-breed></p>
+        </div>
+      </header>
+      <ol class="chat__log" data-chat-log aria-live="polite" aria-label="Messages"></ol>
+      <div class="chat__starters" data-chat-starters role="group" aria-label="Conversation starters">
+        <button type="button" class="starter">Fancy a walk this weekend?</button>
+        <button type="button" class="starter">Which park do you go to?</button>
+        <button type="button" class="starter">Fetch or tug of war?</button>
+      </div>
+      <form class="chat__form" data-chat-form>
+        <label class="visually-hidden" for="chat-input">Your message</label>
+        <input id="chat-input" name="message" type="text" autocomplete="off" maxlength="280" placeholder="Write a message">
+        <button class="btn chat__send" type="submit">Send</button>
+      </form>
+    </section>
   </section>
 
   <dialog class="match" data-match-dialog aria-labelledby="match-title">
@@ -267,8 +292,9 @@
       <div class="match__copy">
         <h2 id="match-title">It’s a match.</h2>
         <p data-match-text>You both said yes.</p>
-        <form method="dialog">
-          <button class="btn" type="submit" autofocus>Keep swiping</button>
+        <form method="dialog" class="match__actions">
+          <button class="btn" type="submit" value="chat" autofocus>Say hello</button>
+          <button class="link-btn" type="submit" value="swipe">Keep swiping</button>
         </form>
       </div>
     </div>
