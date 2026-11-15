@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tindogs</title>
+  <meta name="description" content="Swipe through local dogs, match, and plan a walk together.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ultra&family=Chivo:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#deck">Skip to the dogs</a>
+
+  <section class="cover" id="cover" aria-labelledby="cover-title">
+    <header class="bar">
+      <a class="wordmark" href="#cover">Tindogs</a>
+    </header>
+    <div class="cover__grid">
+      <div class="cover__copy">
+        <h1 id="cover-title">Find your dog a best friend.</h1>
+        <p class="lead">Swipe through local dogs, match, and plan a walk together.</p>
+        <div class="cover__actions">
+          <a class="btn" href="#deck" data-go="deck">Start swiping</a>
+        </div>
+      </div>
+      <div class="cover__field" aria-hidden="true">
+        <div class="fan">
+          <div class="fan__card fan__card--3">
+        <article class="card" aria-label="Momo, 3, Toy poodle">
+          <figure class="card__photo" data-slot="dog-momo-cover" data-alt="A brown toy poodle wearing a cap and a blue shirt on a gravel path">
+            <img src="img/momo.jpg" width="1280" height="1600" alt="A brown toy poodle wearing a cap and a blue shirt on a gravel path" style="object-position: 88% 50%" fetchpriority="high" draggable="false">
+          </figure>
+          <div class="card__label">
+            <p class="card__name">Momo <span class="card__age">3</span></p>
+            <p class="card__breed">Toy poodle</p>
+          </div>
+        </article>
+          </div>
+          <div class="fan__card fan__card--2">
+        <article class="card" aria-label="Domino, 3, Dalmatian">
+          <figure class="card__photo" data-slot="dog-domino-cover" data-alt="A dalmatian in a harness running with a stick in its mouth">
+            <img src="img/domino.jpg" width="1280" height="1600" alt="A dalmatian in a harness running with a stick in its mouth" style="object-position: 22% 50%" fetchpriority="high" draggable="false">
+          </figure>
+          <div class="card__label">
+            <p class="card__name">Domino <span class="card__age">3</span></p>
+            <p class="card__breed">Dalmatian</p>
+          </div>
+        </article>
+          </div>
+          <div class="fan__card fan__card--1">
+        <article class="card" aria-label="Waffles, 1, Welsh corgi">
+          <figure class="card__photo" data-slot="dog-waffles-cover" data-alt="A fawn and white corgi puppy standing on its back legs, tongue out">
+            <img src="img/waffles.jpg" width="1280" height="1600" alt="A fawn and white corgi puppy standing on its back legs, tongue out" style="object-position: 50% 50%" fetchpriority="high" draggable="false">
+          </figure>
+          <div class="card__label">
+            <p class="card__name">Waffles <span class="card__age">1</span></p>
+            <p class="card__breed">Welsh corgi</p>
+          </div>
+        </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="credits">
+      <p>Photographs from Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Cavapoo_male_(90675).jpg">Rhododendrites</a> (Biscuit, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Dalmatian_fetching_a_stick.jpg">Lucasbosch</a> (Domino, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Clyde_The_Bulldog.jpg">Asmadeus</a> (Clyde, Public domain), <a href="https://commons.wikimedia.org/wiki/File:Toy_Poodle_wearing_clothes_in_Tokyo.jpg">Basile Morin</a> (Momo, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Alaskan_Malamute_R_Bartz.jpg">Richard Bartz</a> (Koda, CC BY-SA 2.5), <a href="https://commons.wikimedia.org/wiki/File:Cocker_spaniel_angielski_zlotyy.jpg">Pleple2000</a> (Marmalade, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:2008-08-28_White_German_Shepherd_ready.jpg">Ildar Sagdejev (Specious)</a> (Nieve, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:English_Setter_R_01.JPG">Lilly M</a> (Pepper, CC BY-SA 3.0), <a href="https://commons.wikimedia.org/wiki/File:Barbarella_the_Chinese_crested_puppy_(12929).jpg">Rhododendrites</a> (Lulu, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Dog,_Helgafell,_Sn%C3%A6fellsnes_peninsula,_Iceland,_20230505_1507_5224.jpg">Jakub Hałun</a> (Hekla, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:D%C3%BClmen,_Hausd%C3%BClmen,_Golden_Retriever_--_2022_--_5530.jpg">Dietmar Rabich</a> (Sunny, CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Fawn_and_white_Welsh_Corgi_puppy_standing_on_rear_legs_and_sticking_out_the_tongue.jpg">Huoadg5888</a> (Waffles, CC0).</p>
+    </footer>
+  </section>
+
+  <section class="app" id="deck" aria-labelledby="deck-title">
+    <aside class="side" aria-labelledby="matches-title">
+      <div class="side__top">
+        <a class="wordmark" href="#cover" data-go="cover">Tindogs</a>
+      </div>
+      <h2 class="side__title" id="matches-title">Matches <span class="side__count" data-match-count>0</span></h2>
+      <p class="side__empty" data-matches-empty>No matches yet. Swipe right on a dog you like and they might like you back.</p>
+      <ul class="matches" data-matches aria-live="polite"></ul>
+    </aside>
+
+    <div class="stage">
+      <h2 class="visually-hidden" id="deck-title">Dogs near you</h2>
+      <p class="visually-hidden" id="deck-help">Drag a card right to like, left to pass. With the keyboard, use the right and left arrow keys, or the buttons below the card.</p>
+      <div class="deck" data-deck tabindex="0" aria-describedby="deck-help" aria-label="Dog profiles">
+        <article class="card" data-dog="biscuit" data-match="true" aria-label="Biscuit, 2, Cavapoo">
+          <figure class="card__photo" data-slot="dog-biscuit" data-alt="A curly apricot cavapoo trotting across grass, tongue out">
+            <img src="img/biscuit.jpg" width="1280" height="1600" alt="A curly apricot cavapoo trotting across grass, tongue out" style="object-position: 50% 55%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Biscuit <span class="card__age">2</span></h2>
+            <p class="card__breed">Cavapoo</p>
+            <p class="card__bio">Ears like curtains. Zoomies at five sharp. Will share a tennis ball, eventually.</p>
+            <ul class="chips" aria-label="Likes"><li>tennis balls</li><li>zoomies</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="domino" data-match="false" aria-label="Domino, 3, Dalmatian">
+          <figure class="card__photo" data-slot="dog-domino" data-alt="A dalmatian in a harness running with a stick in its mouth">
+            <img src="img/domino.jpg" width="1280" height="1600" alt="A dalmatian in a harness running with a stick in its mouth" style="object-position: 22% 50%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Domino <span class="card__age">3</span></h2>
+            <p class="card__breed">Dalmatian</p>
+            <p class="card__bio">Sticks are my love language. I will fetch until you give up first.</p>
+            <ul class="chips" aria-label="Likes"><li>sticks</li><li>fetch</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="clyde" data-match="true" aria-label="Clyde, 7, English bulldog">
+          <figure class="card__photo" data-slot="dog-clyde" data-alt="A white and fawn English bulldog looking straight at the camera">
+            <img src="img/clyde.jpg" width="1280" height="1600" alt="A white and fawn English bulldog looking straight at the camera" style="object-position: 50% 40%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Clyde <span class="card__age">7</span></h2>
+            <p class="card__breed">English bulldog</p>
+            <p class="card__bio">Snores loudly, walks slowly, loves completely. Short walks, then a long nap.</p>
+            <ul class="chips" aria-label="Likes"><li>naps</li><li>short walks</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="momo" data-match="false" aria-label="Momo, 3, Toy poodle">
+          <figure class="card__photo" data-slot="dog-momo" data-alt="A brown toy poodle wearing a cap and a blue shirt on a gravel path">
+            <img src="img/momo.jpg" width="1280" height="1600" alt="A brown toy poodle wearing a cap and a blue shirt on a gravel path" style="object-position: 88% 50%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Momo <span class="card__age">3</span></h2>
+            <p class="card__breed">Toy poodle</p>
+            <p class="card__bio">Dresses for every walk. Prefers cafés to parks and friends who carry snacks.</p>
+            <ul class="chips" aria-label="Likes"><li>cafés</li><li>outfits</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="koda" data-match="false" aria-label="Koda, 4, Alaskan malamute">
+          <figure class="card__photo" data-slot="dog-koda" data-alt="An Alaskan malamute standing on a snowy hillside under a blue sky">
+            <img src="img/koda.jpg" width="1280" height="1600" alt="An Alaskan malamute standing on a snowy hillside under a blue sky" style="object-position: 40% 60%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Koda <span class="card__age">4</span></h2>
+            <p class="card__breed">Alaskan malamute</p>
+            <p class="card__bio">Built for snow, lives in a flat. Looking for a hiking partner who can keep up.</p>
+            <ul class="chips" aria-label="Likes"><li>hiking</li><li>snow</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="marmalade" data-match="true" aria-label="Marmalade, 4, Cocker spaniel">
+          <figure class="card__photo" data-slot="dog-marmalade" data-alt="A golden cocker spaniel in profile with long feathered ears">
+            <img src="img/marmalade.jpg" width="1280" height="1600" alt="A golden cocker spaniel in profile with long feathered ears" style="object-position: 50% 40%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Marmalade <span class="card__age">4</span></h2>
+            <p class="card__breed">Cocker spaniel</p>
+            <p class="card__bio">Nose to the ground, ears in the puddles. Swims in anything wet.</p>
+            <ul class="chips" aria-label="Likes"><li>puddles</li><li>swimming</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="nieve" data-match="false" aria-label="Nieve, 2, White shepherd">
+          <figure class="card__photo" data-slot="dog-nieve" data-alt="A white shepherd sitting in autumn leaves, mouth open">
+            <img src="img/nieve.jpg" width="1280" height="1600" alt="A white shepherd sitting in autumn leaves, mouth open" style="object-position: 50% 35%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Nieve <span class="card__age">2</span></h2>
+            <p class="card__breed">White shepherd</p>
+            <p class="card__bio">Leaf-pile enthusiast. Sits on command, stays until something better turns up.</p>
+            <ul class="chips" aria-label="Likes"><li>leaf piles</li><li>squirrels</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="pepper" data-match="false" aria-label="Pepper, 3, English setter">
+          <figure class="card__photo" data-slot="dog-pepper" data-alt="A speckled English setter with its tongue out">
+            <img src="img/pepper.jpg" width="1280" height="1600" alt="A speckled English setter with its tongue out" style="object-position: 50% 35%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Pepper <span class="card__age">3</span></h2>
+            <p class="card__breed">English setter</p>
+            <p class="card__bio">Freckled and soft-mouthed. Points at pigeons, has never caught one.</p>
+            <ul class="chips" aria-label="Likes"><li>pigeons</li><li>long runs</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="lulu" data-match="false" aria-label="Lulu, 1, Chinese crested">
+          <figure class="card__photo" data-slot="dog-lulu" data-alt="A fluffy white Chinese crested puppy resting its chin on a teal lead">
+            <img src="img/lulu.jpg" width="1280" height="1600" alt="A fluffy white Chinese crested puppy resting its chin on a teal lead" style="object-position: 50% 45%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Lulu <span class="card__age">1</span></h2>
+            <p class="card__breed">Chinese crested</p>
+            <p class="card__bio">Small, fluffy and teething on everything. Seeking a calm older dog to learn from.</p>
+            <ul class="chips" aria-label="Likes"><li>chew toys</li><li>laps</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="hekla" data-match="false" aria-label="Hekla, 5, Farm dog">
+          <figure class="card__photo" data-slot="dog-hekla" data-alt="A black and white farm dog sitting on a grassy hill in Iceland">
+            <img src="img/hekla.jpg" width="1280" height="1600" alt="A black and white farm dog sitting on a grassy hill in Iceland" style="object-position: 50% 40%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Hekla <span class="card__age">5</span></h2>
+            <p class="card__breed">Farm dog</p>
+            <p class="card__bio">Lives on a hillside and herds whatever moves. Into long walks with a view.</p>
+            <ul class="chips" aria-label="Likes"><li>herding</li><li>hills</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="sunny" data-match="false" aria-label="Sunny, 6, Golden retriever">
+          <figure class="card__photo" data-slot="dog-sunny" data-alt="A golden retriever looking up with its mouth open, waiting for a treat">
+            <img src="img/sunny.jpg" width="1280" height="1600" alt="A golden retriever looking up with its mouth open, waiting for a treat" style="object-position: 30% 50%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Sunny <span class="card__age">6</span></h2>
+            <p class="card__breed">Golden retriever</p>
+            <p class="card__bio">Treat catcher, pond swimmer, professional greeter at the front door.</p>
+            <ul class="chips" aria-label="Likes"><li>treats</li><li>ponds</li></ul>
+          </div>
+        </article>
+        <article class="card" data-dog="waffles" data-match="true" aria-label="Waffles, 1, Welsh corgi">
+          <figure class="card__photo" data-slot="dog-waffles" data-alt="A fawn and white corgi puppy standing on its back legs, tongue out">
+            <img src="img/waffles.jpg" width="1280" height="1600" alt="A fawn and white corgi puppy standing on its back legs, tongue out" style="object-position: 50% 50%" loading="lazy" draggable="false">
+          </figure>
+          <span class="stamp stamp--like" aria-hidden="true">Like</span>
+          <span class="stamp stamp--nope" aria-hidden="true">Nope</span>
+          <div class="card__label">
+            <h2 class="card__name">Waffles <span class="card__age">1</span></h2>
+            <p class="card__breed">Welsh corgi</p>
+            <p class="card__bio">Stands up for treats. Short legs, big opinions, first to the ball every time.</p>
+            <ul class="chips" aria-label="Likes"><li>treats</li><li>ball</li></ul>
+          </div>
+        </article>
+        <div class="deck__empty" data-deck-empty>
+          <h3>That’s every dog nearby.</h3>
+          <p>Come back later for new faces, or go through them again.</p>
+          <button class="btn" type="button" data-restart>Start over</button>
+        </div>
+      </div>
+
+      <div class="actions" role="group" aria-label="Swipe actions">
+        <button class="act act--undo" type="button" data-act="undo" aria-label="Undo last swipe" disabled>
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 14 4 9l5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="act act--nope" type="button" data-act="nope" aria-label="Pass">
+          <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+        </button>
+        <button class="act act--like" type="button" data-act="like" aria-label="Like">
+          <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z" fill="currentColor"/></svg>
+        </button>
+      </div>
+      <p class="visually-hidden" aria-live="polite" data-announce></p>
+    </div>
+  </section>
+
+  <dialog class="match" data-match-dialog aria-labelledby="match-title">
+    <div class="match__inner">
+      <figure class="match__photo" data-match-photo></figure>
+      <div class="match__copy">
+        <h2 id="match-title">It’s a match.</h2>
+        <p data-match-text>You both said yes.</p>
+        <form method="dialog">
+          <button class="btn btn--knock" type="submit" autofocus>Keep swiping</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
