@@ -1,5 +1,5 @@
 /* Hallmark · shape: app screen (welcome cover, then swipe deck) · genre: playful · theme: Halftone (deal 3/3, seed tinder-app-dogs-swiping-9dab·f853cc4c·2026-11-15·r0) · job: try · draw: none (app scope)
- * hero: cover, copy left, spot field right · nav: wordmark bar · footer: credits line · imagery: photographs (Wikimedia Commons, credited) · signature: the real profile cards fanned on the spot field, the same cards you swipe · halftone: cream
+ * hero: cover, copy left, spot field right · nav: wordmark bar · footer: credits line · imagery: photographs (Wikimedia Commons, credited) · signature: the real profile cards fanned on the spot field, the same cards you swipe · halftone: cream stock, cobalt spot (by request: blue and yellow, colours dogs see), sunflower on the match dialog
  * axes: light/slab-serif/warm · posture: committed · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H5 E4 S4 R4 V4 · weakest: P, a dating-app clone is a familiar argument; the print voice (label panel under the photo instead of a dark gradient over it) is the disagreement */
 @import url("./tokens.css");
@@ -28,9 +28,6 @@
 .btn:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }
 .btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
 .btn[aria-busy="true"] { cursor: progress; }
-.btn--knock { background: var(--color-paper); color: var(--color-ink); }
-.btn--knock:hover { background: var(--color-paper-3); }
-.btn--knock:focus-visible { outline-color: var(--color-paper); }
 
 /* cover */
 .cover { min-height: 100dvh; display: flex; flex-direction: column; max-width: var(--container); margin-inline: auto; }
@@ -124,13 +121,13 @@
 html:not(.js) .actions { display: none; }
 
 /* match */
-.match { width: min(720px, calc(100% - 2 * var(--space-md))); padding: 0; border: var(--rule-bar) solid var(--color-ink); border-radius: var(--radius-card); background: var(--color-accent); color: var(--color-accent-ink); }
+.match { width: min(720px, calc(100% - 2 * var(--space-md))); padding: 0; border: var(--rule-bar) solid var(--color-ink); border-radius: var(--radius-card); background: var(--color-sun); color: var(--color-ink); }
 .match::backdrop { background: color-mix(in oklab, var(--color-ink) 72%, transparent); }
 .match__inner { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
 .match__photo { margin: 0; aspect-ratio: 4 / 5; border-right: var(--rule-bar) solid var(--color-ink); }
 .match__photo > img { width: 100%; height: 100%; object-fit: cover; }
 .match__copy { display: grid; align-content: center; gap: var(--space-md); padding: var(--space-xl); }
-.match__copy h2 { font-size: var(--text-section); color: var(--color-accent-ink); max-width: 9ch; }
+.match__copy h2 { font-size: var(--text-section); color: var(--color-ink); max-width: 9ch; }
 .match__copy p { font-size: var(--text-lead); line-height: 1.4; }
 .match form { padding-top: var(--space-xs); }
 .match[open] { animation: match-in var(--dur-long) var(--ease-out); }
